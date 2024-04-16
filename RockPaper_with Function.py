@@ -7,7 +7,7 @@ def get_user_choice():
             return user_choice
         else:
             print ("Invalid choice please retry")
-
+            continue
 def computers_choice():
     computer_choice = random.choice(['rock', 'paper', 'scissor'])
     return computer_choice

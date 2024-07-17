@@ -1,0 +1,45 @@
+def addition(n, i):
+    result = n + i
+    print(result)
+
+def subtraction(n, i):
+    if i > n:
+        result = "Negative result cannot be subtracted"
+    else:
+        result = n - i
+    print(result)
+
+def multiplication(n, i):
+    result = n * i
+    print(result)
+
+def division(n, i):
+    if i == 0:
+        result = "Invalid operation: division by zero"
+    else:
+        result = n / i
+    print(result)
+
+while True:
+    n = int(input("Enter a number: "))
+    i = int(input("Enter another number: "))
+    a = str(input("Enter the Operator +, -, *, /: "))
+
+    if a == "+":
+        addition(n, i)
+    elif a == "-":
+        subtraction(n, i)
+    elif a == "*":
+        multiplication(n, i)
+    elif a == "/":
+        division(n, i)
+    else:
+        print("Wrong Operator. Please try again.")
+
+    choice = input("Do you want to perform another operation? (yes/no): ").strip().lower()
+    if choice == 'no':
+        print("Exiting the application. Goodbye!")
+        break
+    elif choice != 'yes':
+        print("Invalid choice. Exiting the application.")
+        break

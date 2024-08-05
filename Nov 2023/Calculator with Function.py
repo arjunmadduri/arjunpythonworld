@@ -32,5 +32,3 @@ elif a=="/":
         division(n,i)
 else:
         print("Wrong Operator. Please Restart the Program")
-
-        

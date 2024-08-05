@@ -1,5 +1,9 @@
-rows = 1000
-for r in range (1,rows+1):
-    for i in range (1, r+1):
-        print ("*", end = " ")
-    print (' ')
+
+rows = int(input("Enter the number you want to use for the row dimension::: "))
+column = int(input("Enter the number you want to use for the column dimension::: "))
+for r in range(rows):
+    for c in range(column):
+        print(" * ", end='')
+    print()
+
+

@@ -35,7 +35,8 @@ while True:
         division(n, i)
     else:
         print("Wrong Operator. Please try again.")
-
+    
+    # Ask the user if they want to repeat or quit
     choice = input("Do you want to perform another operation? (yes/no): ").strip().lower()
     if choice == 'no':
         print("Exiting the application. Goodbye!")

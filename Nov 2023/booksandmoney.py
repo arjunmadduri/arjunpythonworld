@@ -14,14 +14,16 @@ TaxCode = {
 def books(book_cost,book_input,taxrate):
     if book_input <= 0:
         print("Invalid input please retry")
+    elif book_cost >= 15.00 or book_cost <= 3.00:
+        print("Invlaid input please retry") 
     elif book_input >= 1:
         result = book_input*book_cost
         price = result+(result*taxrate/100)
         print(price, " Dollars")
 
-book_cost = 3.00
+book_cost = int(input("Enter the amount your book is from 3.00$-15.00$"))
 book_input = int(input("Enter the amount of books you want to buy::: "))
-Statecode = str(input("Enter State Code from these Choices - OR,WA,CA,TX:"))
+Statecode = (input("Enter State Code from these Choices - OR,WA,CA,TX:"))
 taxrate = TaxCode[Statecode]
 
 books(book_cost,book_input,taxrate)

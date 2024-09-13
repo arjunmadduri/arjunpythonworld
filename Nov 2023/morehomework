@@ -1,1 +1,4 @@
 #5 friends decided to go for a picnic and they start discussing the items which they have to take with them. They wanted to create a list where they can add items one by one. To help them, write a program in python to create an empty list. Then use for loop and append() method to add items one by one. ( Note: Range of loop depends on the number of items that have to be included in the list.) After adding all the items ask whether the user whether wants to remove any items or not and then print the whole list on the screen.
+
+
+create a list of some numbers and remove duplicates with the help of set

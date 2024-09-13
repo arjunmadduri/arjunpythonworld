@@ -1,5 +1,5 @@
-#this is our list where we have our numbers stored 
-numbers = [1, 2, 3, 2, 4, 5, 6, 1, 7, 8, 4]
+#this is our list where we have our numbers stored
+numbers = [4, 4, 3, 3, 2, 2,]
 #this is where we convert our list into a set
 unique_numbers = set(numbers)
 #here is where we convert it back but with the effects of our previous variable in the line above

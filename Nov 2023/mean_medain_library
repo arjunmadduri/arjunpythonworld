@@ -1,0 +1,9 @@
+import statistics
+numbers = []
+number_amount = int(input("Enter how many numbers you want to enter::: "))
+for i in range(number_amount):
+    number = int(input("Enter a number::: "))
+    numbers.append(number)
+print(numbers)
+median = statistics.median(numbers)
+print(median)

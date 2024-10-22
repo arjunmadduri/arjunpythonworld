@@ -7,3 +7,5 @@ for i in range(number_amount):
 print(number)
 mode = statistics.mode(number)
 print(mode)
+multimode = statistics.multimode(number)
+print(multimode)

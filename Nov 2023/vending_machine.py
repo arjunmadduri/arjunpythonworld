@@ -48,6 +48,6 @@ if recipt == "yes":
     print("The price of each candy was::: ",candyprice)
     print("The total price for all the candies you wanted was::: ",total_candy_price)
     print("the total money you paid for all the candy was::: ",user_money_paid)
-    print("The candies you got were:::",candies_given_to_user)
+    print("The candies you got were:::",candies)
 else:
     print("Okay thank you for shopping at Arjun's Candy Machine, Bye! Bye!::: ")

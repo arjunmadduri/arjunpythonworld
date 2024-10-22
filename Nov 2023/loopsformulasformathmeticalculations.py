@@ -7,6 +7,6 @@ for g in range(2,10,-2):
 #how to reverse your loop
 for n in range(10,1,-1):
     print(n)
-
+ 
 for l in range(10,2,-2):
     print(l)

@@ -1,0 +1,95 @@
+import statistics
+
+# Initialize a dictionary to store friends and their flavors
+friends_flavors = {}
+
+# Get the number of friends
+num_friends = int(input("Enter the number of friends: "))
+
+print("Ice Cream Adventure Analyzer!")
+
+for i in range(num_friends):
+    friend_name = input(f"\nEnter the name of Friend {i + 1}: ")
+    flavors = {}
+    print(f"{friend_name}, please enter your flavors:")
+    
+    while True:
+        flavor = input("Enter a flavor (or type 'done' to finish): ")
+        if flavor.lower() == 'done':
+            break
+        scoops = int(input(f"How many scoops of {flavor} did you have? "))
+        flavors[flavor] = scoops
+
+    friends_flavors[friend_name] = flavors
+
+# Summary calculations
+total_scoops = 0
+all_scoops = []
+
+print("\n--- Summary ---")
+for friend, flavors in friends_flavors.items():
+    friend_total = sum(flavors.values())
+    all_scoops.extend(flavors.values())
+    total_scoops += friend_total
+    average_scoops = statistics.mean(flavors.values())
+    print(f"{friend} - Total scoops: {friend_total}, Average scoops per flavor: {average_scoops:.2f}")
+
+# Overall calculations
+overall_average = statistics.mean(all_scoops)
+max_scoops = max(all_scoops)
+most_popular = [flavor for flavors in friends_flavors.values() for flavor, scoops in flavors.items() if scoops == max_scoops]
+
+print(f"\nOverall total scoops: {total_scoops}")
+print(f"Overall average scoops per flavor: {overall_average:.2f}")
+print("Most popular flavor(s): " + ", ".join(most_popular))
+
+
+
+
+
+
+import statistics
+
+# Initialize a dictionary to store friends and their flavors
+friends_flavors = {}
+
+# Get the number of friends
+num_friends = int(input("Enter the number of friends: "))
+
+print("Ice Cream Adventure Analyzer!")
+
+for i in range(num_friends):
+    friend_name = input(f"\nEnter the name of Friend {i + 1}: ")
+    flavors = {}
+    print(f"{friend_name}, please enter your flavors:")
+    
+    while True:
+        flavor = input("Enter a flavor (or type 'done' to finish): ")
+        if flavor.lower() == 'done':
+            break
+        scoops = int(input(f"How many scoops of {flavor} did you have? "))
+        flavors[flavor] = scoops
+
+    friends_flavors[friend_name] = flavors
+
+# Summary calculations
+total_scoops = 0
+all_scoops = []
+
+print("\n--- Summary ---")
+for friend, flavors in friends_flavors.items():
+    friend_total = sum(flavors.values())
+    all_scoops.extend(flavors.values())
+    total_scoops += friend_total
+    average_scoops = statistics.mean(flavors.values())
+    print(f"{friend} - Total scoops: {friend_total}, Average scoops per flavor: {average_scoops:.2f}")
+
+# Overall calculations
+overall_average = statistics.mean(all_scoops)
+max_scoops = max(all_scoops)
+most_popular = [flavor for flavors in friends_flavors.values() for flavor, scoops in flavors.items() if scoops == max_scoops]
+
+print(f"\nOverall total scoops: {total_scoops}")
+print(f"Overall average scoops per flavor: {overall_average:.2f}")
+print("Most popular flavor(s): " + ", ".join(most_popular))
+

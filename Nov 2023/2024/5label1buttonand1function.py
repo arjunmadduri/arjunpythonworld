@@ -1,0 +1,16 @@
+import tkinter as TK 
+window = TK.Tk()
+def change_label(x):
+    label.config(text = x)
+window.geometry("640x430")
+button1 = TK.Button(text = "button 1", command = lambda: change_label("Button1"))
+button1.pack()
+button2 = TK.Button(text = "button 2", command = lambda: change_label("Button2"))
+button2.pack()
+button3 = TK.Button(text = "button 3", command = lambda: change_label("Button3"))
+button3.pack()
+button4 = TK.Button(text = "button 4", command = lambda: change_label("Button4"))
+button4.pack()
+label = TK.Label(text = "Testing")
+label.pack()
+window.mainloop()

@@ -1,5 +1,5 @@
 import tkinter as TK
-window= TK.Tk()
+window = TK.Tk()
 window.geometry("640x430")
 window.config(bg="teal")
 window.title("Advertising Form")

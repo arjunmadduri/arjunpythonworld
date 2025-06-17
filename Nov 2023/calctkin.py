@@ -1,0 +1,33 @@
+import tkinter as TK
+from tkinter import messagebox
+window = TK.Tk()
+window.title("My Window")
+window.geometry("640x430")
+window.config(bg="Red")
+Activities_list = ["Running", "Walking", "Cycling", "Swimming", "Hiking", "Jumping Jacks", "Push-ups", "Squats", "Plank", "Yoga"]
+selected_value = TK.StringVar()
+def dailysummary():
+    print("Daily Summary")
+    print("Steps: ", Step.get())
+    print("Calories: ", Calorie.get())
+def activitylog():
+    x = selected_value.get()
+    messagebox.showinfo("Your activity is ",f"{x}")
+Title = TK.Label(window, text="Fitness Tracker", font=("Arial", 30), bg="Black", fg="Green")
+Title.pack()
+Steps = TK.Label(window, text="Steps", font=("Arial", 30), bg="Black", fg="Green")
+Steps.pack()
+Step = TK.Entry(window, font=("Arial", 30), bg="Black", fg="Green")
+Step.pack()
+Calories = TK.Label(window, text="Calories", font=("Arial", 30), bg="Black", fg="Green")
+Calories.pack()
+Calorie = TK.Entry(window, font=("Arial", 30), bg="Black", fg="Green")
+Calorie.pack()
+Activities = TK.OptionMenu(window,selected_value,*Activities_list,command = activitylog)
+Activities.pack()
+Activities.config(font=("Arial", 30), bg="Black", fg="Green")
+Activity_Log = TK.Button(window, text="Activity Log", font=("Arial", 30), bg="Black", fg="Green",command = activitylog)
+Activity_Log.pack()
+Daily_Summary = TK.Button(window, text="Show Daily Summary", font=("Arial", 30), bg="Black", fg="Green",command = dailysummary)
+Daily_Summary.pack()
+window.mainloop()
